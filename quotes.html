@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote of the Day</title>
+</head>
+<body>
+
+<h1>Quote of the Day</h1>
+<div id="quote"></div>
+<div id="websites"></div>
+<div id="updated-websites"></div>
+
+<script>
+let userNumber = prompt("Please enter a number:");
+
+let quotes = [
+    "With great power, comes great responsibility - Uncle Ben",
+    "What is grief, if love not persevering? - Vision",
+    "Part of the journey is the end - Tony Stark",
+    "I assure you, brother, the sun will shine on us again. - Loki Laufeyson",
+    "I'm with you 'til the end of the line. - Steve Rogers"
+];
+
+userNumber = Number(userNumber);
+if (isNaN(userNumber)) userNumber = 0;
+let index = userNumber % 5;
+
+document.getElementById("quote").innerHTML = "<h2>Your Quote:</h2><p>" + quotes[index] + "</p>";
+
+let websites = [
+    "https://www.mail.google.com",
+    "https://www.youtube.com",
+    "https://www.google.com"
+];
+
+let websiteHTML = "<h2>Favorite Websites:</h2>";
+for (let i = 0; i < websites.length; i++) {
+    websiteHTML += "<a href='" + websites[i] + "'>" + websites[i] + "</a><br>";
+}
+document.getElementById("websites").innerHTML = websiteHTML;
+
+let newSite = prompt("Please enter your favorite website URL:");
+websites.push(newSite);
+websites.shift();
+
+let updatedHTML = "<h2>Updated Website List:</h2>";
+for (let i = 0; i < websites.length; i++) {
+    updatedHTML += "<a href='" + websites[i] + "'>" + websites[i] + "</a><br>";
+}
+document.getElementById("updated-websites").innerHTML = updatedHTML;
+
+</script>
+
+</body>
+</html>
