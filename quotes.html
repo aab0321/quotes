@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quote of the Day</title>
+    <title>Marvel Quote of the Day</title>
 </head>
 <body>
 
-<h1>Quote of the Day</h1>
+<h1>Marvel Quote of the Day</h1>
 <div id="quote"></div>
 <div id="websites"></div>
 <div id="updated-websites"></div>
@@ -29,12 +29,12 @@ let index = userNumber % 5;
 document.getElementById("quote").innerHTML = "<h2>Your Quote:</h2><p>" + quotes[index] + "</p>";
 
 let websites = [
-    "https://www.mail.google.com",
-    "https://www.youtube.com",
-    "https://www.google.com"
+    "https://www.marvel.com/",
+    "https://www.marvel.com/comics",
+    "https://www.marvel.com/movies"
 ];
 
-let websiteHTML = "<h2>Favorite Websites:</h2>";
+let websiteHTML = "<h2>Related Websites:</h2>";
 for (let i = 0; i < websites.length; i++) {
     websiteHTML += "<a href='" + websites[i] + "'>" + websites[i] + "</a><br>";
 }
